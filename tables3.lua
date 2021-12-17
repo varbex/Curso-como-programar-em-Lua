@@ -17,14 +17,14 @@ local moto = {
     marca = "Yamaha",
     modelo = "XV",
     cilindrada = 250,
-    nome_formatado = self.marca.." "..self.modelo.." "..self.cilindrada
+    nome_formatado = function(moto) return moto.marca.." "..moto.modelo.." "..moto.cilindrada end
 }
 
 for key, value in pairs(moto) do
-    print(tostring(key).. " : " .. value)
+    print(tostring(key).. " : " .. tostring(value))
 end
 
 print(moto.marca)
 print(moto.modelo)
 print(moto.cilindrada)
-print(moto.nome_formatado)
+print(moto.nome_formatado(moto))
